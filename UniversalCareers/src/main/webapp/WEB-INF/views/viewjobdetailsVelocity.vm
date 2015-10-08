@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+	
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
+	
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+	<title><tiles:insertAttribute name="title" /></title>
+</head>
+<body>
+		<nav class="navbar navbar-inverse navbar-static-top" role="navigation">
+	       <div class="container">
+	           <div class="navbar-header">
+	               <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+	                   <span class="sr-only">Toggle navigation</span>
+	                   <span class="icon-bar"></span>
+	                   <span class="icon-bar"></span>
+	                   <span class="icon-bar"></span>
+	               </button>
+	               <a class="navbar-brand" href="/controllers/">Universal Careers</a>
+	           </div>
+	           <!-- Collect the nav links, forms, and other content for toggling -->
+	           <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+	               <ul class="nav navbar-nav">
+	                   <li>
+	                       <a href="viewJobs">View Jobs</a>
+	                   </li>
+	                   <li>
+	                       <a href="myProfile">My Profile</a>
+	                   </li>
+	                   <li>
+	                       <a href="uploadResume">Upload/Change Resume</a>
+	                   </li>
+	                   <li>
+	                       <a href="myapplications">My Applications</a>
+	                   </li>
+	                   <li>
+	                       <a href="applicantchangepassword">Change Password</a>
+	                   </li>
+	                   <li>
+	                       <a href="logout">Logout</a>
+	                   </li>
+	               </ul>
+	           </div>
+	       </div>
+	   </nav>
+	    <div class="container">
+	       	<div class="row">
+	            <div class="col-md-3">
+				<div class="list-group">
+					<a href="viewJobs" class="list-group-item">View Jobs</a>
+					<a href="myProfile" class="list-group-item">My Profile</a>
+					<a href="uploadResume" class="list-group-item">Upload/Change Resume</a>
+					<a href="myapplications" class="list-group-item">My Applications</a>
+					<a href="applicantchangepassword" class="list-group-item">Change Password</a>
+					<a href="logout" class="list-group-item">Logout</a>
+				</div>
+
+				</div>
+	            <div class="col-md-9">
+
+<div class="panel panel-primary">
+	  <div class="panel-heading">
+	    	<h3 class="panel-title">Job Details</h3>
+	  </div>
+	  <div class="panel-body">
+	  	<table class="table table-hover">
+	  		<tbody>
+		  		<tr>
+		  			<td><label for="jobTitle" class="control-label">Job Title:</label></td>
+		  			<td colspan="3"><label class="control-label">$job.jobTitle</label></td>
+		  		</tr>
+		  		<tr>
+		  			<td><label for="description" class="control-label">Description:</label></td>
+		  			<td colspan="3"><label class="control-label">$job.description:</label></td>
+		  		</tr>
+		  		<tr>
+		  			<td><label for="durationFrom" class="control-label">Duration From:</label></td>
+		  			<td><label class="control-label">$job.durationFrom</label></td>
+		  			<td><label for="durationTo" class="control-label">Duration To:</label></td>
+		  			<td><label class="control-label">$job.durationTo</label></td>
+		  		</tr>
+		  		<tr>
+		  			<td><label for="jobType" class="control-label">Job Type:</label></td>
+		  			<td><label class="control-label">$job.jobType</label></td>
+		  			<td><label for="skills" class="control-label">Skills:</label></td>
+		  			<td><label class="control-label">$job.skills</label></td>
+		  		</tr>
+		  		<tr>
+		  			<td><label for="city" class="control-label">City:</label></td>
+		  			<td><label class="control-label">$job.city</label></td>
+		  			<td><label for="state" class="control-label">State:</label></td>
+		  			<td><label class="control-label">$job.state</label></td>
+		  		</tr>
+		  		<tr>
+		  			<td><label for="country" class="control-label">Country:</label></td>
+		  			<td><label class="control-label">$job.country</label></td>
+		  			<td><label for="hourlyWage" class="control-label">Hourly Wage:</label></td>
+		  			<td><label class="control-label">$job.hourlyWage</label></td>
+		  		</tr>
+				#if($noShow=='no')
+		  			<tr>
+			  			<td colspan="4"><a href="applyToJob?id=$job.id" class="btn btn-success">Apply</a></td>
+			  		</tr>
+		  		#end
+	  		</tbody>
+	  	</table>
+	</div>
+</div>
+
+</div>
+			</div>
+		</div>			
+</body>
+</html>

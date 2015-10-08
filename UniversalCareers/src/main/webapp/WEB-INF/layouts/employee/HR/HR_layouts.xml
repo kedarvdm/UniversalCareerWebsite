@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tiles-definitions PUBLIC 
+"-//Apache Software Foundation//DTD Tiles Configuration 2.0//EN" 
+"http://tiles.apache.org/dtds/tiles-config_2_0.dtd">
+<tiles-definitions>
+	<definition name="HR.base.definition" template="/WEB-INF/layouts/employee/HR/simple_layout.jsp">
+		<put-attribute name="title" value="/WEB-INF/views/title.jsp" />
+		<put-attribute name="body" value="" />
+	</definition>
+	
+	<definition name="hr_layout_message" template="/WEB-INF/layouts/employee/HR/simple_layout.jsp">
+		<put-attribute name="title" value="/WEB-INF/views/title.jsp" />
+		<put-attribute name="body" value="/WEB-INF/views/employee/HR/message.jsp" />
+	</definition>
+	
+	<definition name="hr_layout" template="/WEB-INF/layouts/employee/HR/HR_layout.jsp">
+		<put-attribute name="title" value="/WEB-INF/views/title.jsp" />
+		<put-attribute name="menu" value="/WEB-INF/views/employee/HR/hrmenu.jsp" />
+		<put-attribute name="body" value="" />
+	</definition>
+	
+	<definition name="hr_layout.PostJob" extends="hr_layout">
+		<put-attribute name="body" value="/WEB-INF/views/employee/HR/postjob.jsp" />
+	</definition>
+	
+	<definition name="hr_layout.ViewJobs" extends="hr_layout">
+		<put-attribute name="body" value="/WEB-INF/views/employee/HR/hrviewjob.jsp" />
+	</definition>
+	
+	<definition name="hr_layout.Message" extends="hr_layout">
+		<put-attribute name="body" value="/WEB-INF/views/employee/HR/message.jsp" />
+	</definition>
+	
+	<definition name="hr_layout.HRProfile" extends="hr_layout">
+		<put-attribute name="body" value="/WEB-INF/views/employee/HR/hrupdateprofile.jsp" />
+	</definition>
+	
+	<definition name="hr_layout.UpdateJob" extends="hr_layout">
+		<put-attribute name="body" value="/WEB-INF/views/employee/HR/updatejob.jsp" />
+	</definition>
+	
+	<definition name="hr_layout.ChangePassword" extends="hr_layout">
+		<put-attribute name="body" value="/WEB-INF/views/employee/HR/hrchangepassword.jsp" />
+	</definition>
+	
+	<definition name="hr_layout.ViewApplications" extends="hr_layout">
+		<put-attribute name="body" value="/WEB-INF/views/employee/HR/viewapplicationsreceived.jsp" />
+	</definition>
+	
+	<definition name="hr_layout.ViewApplicant" extends="hr_layout">
+		<put-attribute name="body" value="/WEB-INF/views/employee/HR/hrviewapplicantdetails.jsp" />
+	</definition>
+	
+	<definition name="hr_layout.SendEmail" extends="hr_layout">
+		<put-attribute name="body" value="/WEB-INF/views/employee/HR/hrsendemail.jsp" />
+	</definition>
+</tiles-definitions>

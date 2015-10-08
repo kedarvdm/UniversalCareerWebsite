@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tiles-definitions PUBLIC 
+"-//Apache Software Foundation//DTD Tiles Configuration 2.0//EN" 
+"http://tiles.apache.org/dtds/tiles-config_2_0.dtd">
+<tiles-definitions>
+	<definition name="base.definition" template="/WEB-INF/layouts/employer/simple_layout.jsp">
+		<put-attribute name="title" value="/WEB-INF/views/title.jsp" />
+		<put-attribute name="body" value="/WEB-INF/views/index.jsp" />
+	</definition>
+	
+	<definition name="employer_layout_signup" extends="applicant.base.definition">
+		<put-attribute name="title" value="/WEB-INF/views/title.jsp" />
+		<put-attribute name="body" value="/WEB-INF/views/employer/employersignup.jsp" />
+	</definition>
+	
+	<definition name="base.definition.Logout" template="/WEB-INF/layouts/employer/simple_layout.jsp">
+		<put-attribute name="title" value="/WEB-INF/views/title.jsp" />
+		<put-attribute name="body" value="/WEB-INF/views/invalidLogin.jsp" />
+	</definition>
+	
+	<definition name="base.definition.RegFailed" template="/WEB-INF/layouts/employer/simple_layout.jsp">
+		<put-attribute name="title" value="/WEB-INF/views/title.jsp" />
+		<put-attribute name="body" value="/WEB-INF/views/employer/message.jsp" />
+	</definition>
+	
+	<definition name="employer_layout" template="/WEB-INF/layouts/employer/employer_layout.jsp">
+		<put-attribute name="title" value="/WEB-INF/views/title.jsp" />
+		<put-attribute name="menu" value="/WEB-INF/views/employer/employermenu.jsp" />
+		<put-attribute name="body" value="" />
+	</definition>
+	
+	<definition name="employer_layout.Message" extends="employer_layout">
+		<put-attribute name="body" value="/WEB-INF/views/employer/message.jsp" />
+	</definition>
+	
+	<definition name="employer_layout.AddEmployee" extends="employer_layout">
+		<put-attribute name="body" value="/WEB-INF/views/employer/addEmployee.jsp" />
+	</definition>
+	
+	<definition name="employer_layout.ManageEmployees" extends="employer_layout">
+		<put-attribute name="body" value="/WEB-INF/views/employer/manageEmployees.jsp" />
+	</definition>
+	
+	<definition name="employer_layout.UpdateEmployee" extends="employer_layout">
+		<put-attribute name="body" value="/WEB-INF/views/employer/updateEmployee.jsp" />
+	</definition>
+	
+	<definition name="employer_layout.UpdateEmployerProfile" extends="employer_layout">
+		<put-attribute name="body" value="/WEB-INF/views/employer/updateEmployerProfile.jsp" />
+	</definition>
+	
+	<definition name="employer_layout.ChangePassword" extends="employer_layout">
+		<put-attribute name="body" value="/WEB-INF/views/employer/employerchangepassword.jsp" />
+	</definition>
+</tiles-definitions>
