@@ -1,2 +1,2 @@
 # UniversalCareerWebsite
-Semester project for Application Engineering and Development
+Semester project for Web Development Tools and Methods
